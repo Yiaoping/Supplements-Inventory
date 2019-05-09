@@ -22,10 +22,9 @@ public class Main {
 			int numberChosen = Integer.parseInt(supplementChoice);
 			
 			if(numberChosen== 1) {
-				System.out.println("Type in a protein: (whey, casein, or isolate)");
+				System.out.println("Type in a protein: (whey, casein, isolate, or exit)");
 				String protein = s.nextLine();
 				while(true) {
-					System.out.println("Enter in a protein")
 					if(protein.equals("whey")) {
 						Protein wheyProtein = new Whey();
 						player.addItemToInv(wheyProtein);
@@ -46,6 +45,7 @@ public class Main {
 						protein = s.nextLine();
 						continue;
 					}
+					System.out.println("Enter in a new protein:  (whey, casein, isolate, or exit)");
 					protein = s.nextLine();
 				}
 			}
