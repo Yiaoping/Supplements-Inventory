@@ -24,14 +24,66 @@ public class Player {
 	
 	//removes the items in the inventory
 	public void removeItem(String item) {
-		
-		if (list.contains(item)) {
-			list.remove(item);
-			System.out.println("Item removed: " + item);
+		System.out.println("Removing item..");
+		if(item.equals("whey")) {
+			for(Supplements x : list) {
+				if (x instanceof Whey) {
+					list.remove(x);
+					System.out.println("Removed item: " + x);
+					return;
+				}
+			}
+			System.out.println("There's no Whey item to remove!");
 		}
-		else
-			System.out.println("No such item to remove.");
+		
+		else if(item.equals("casein")) {
+			for(Supplements x: list) {
+				if(x instanceof Casein) {
+					list.remove(x);
+					System.out.println("Removed item: " + x);
+					return;
+				}
+			}
+			System.out.println("There's no Casein item to remove!");
+		}
+		
+		else if(item.equals("isolate")) {
+			for(Supplements x: list) {
+				if(x instanceof Isolate) {
+					list.remove(x);
+					System.out.println("Removed item: " + x);
+					return;
+				}
+			}
+			System.out.println("There's no Isolate protein to remove!");
+		}
+		
+		else if (item.equals("creatine")) {
+			for(Supplements x: list) {
+				if(x instanceof Creatine) {
+					list.remove(x);
+					System.out.println("Removed item: " + x);
+					return;
+				}
+			}
+			System.out.println("There's no creatine to remove!");
+			
+		}
+		
+		else if (item.equals("bcaa")) {
+			for(Supplements x: list) {
+				if(x instanceof BCAA) {
+					list.remove(x);
+					System.out.println("Removed item: " + x);
+					return;
+				}
+			}
+			System.out.println("There's no bcaa to remove!");
+			
+		}
+		
 	}
+	
 	
 	
 
